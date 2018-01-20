@@ -1,0 +1,29 @@
+{
+  "name": "databass-media-service",
+  "version": "1.0.0",
+  "description": "Provides song metadata to databass.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codyromano/databass-media-service.git"
+  },
+  "keywords": [
+    "music",
+    "exercise",
+    "running",
+    "biking",
+    "media"
+  ],
+  "author": "Cody Romano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codyromano/databass-media-service/issues"
+  },
+  "homepage": "https://github.com/codyromano/databass-media-service#readme",
+  "dependencies": {
+    "@google-cloud/storage": "^1.5.2"
+  }
+}
