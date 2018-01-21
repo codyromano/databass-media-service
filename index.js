@@ -16,7 +16,15 @@ app.get('/media-api/list-songs', function(request, result) {
   listSongs()
     .then(songList => result.send(
       JSON.stringify(songList)
-    ));
+    ))
+    .catch(err => {
+      console.log('Error fetching songs: ', err);
+      const errorResponse = JSON.stringify({
+        error: 'Issue fetching songs'
+      });
+
+      result.send(errorResponse);
+    });
 });
 
 app.listen(config.httpPort);
