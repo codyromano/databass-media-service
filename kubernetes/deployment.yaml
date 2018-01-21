@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: databass-media
-        image: media:v1
+        image: gcr.io/vital-191505/media:v1
         imagePullPolicy: Always
         ports:
         - containerPort: 9000

@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    annotations:
+      kubernetes.io/ingress.class: nginx
+      kubernetes.io/tls-acme: "true"
+    name: media-api-ingress
+spec:
+    rules:
+      - host: databass.io
+        http:
+          paths:
+            - backend:
+                serviceName: databass-media
+                servicePort: 9000
+              path: /media-api/
+    tls:
+        - hosts:
+            - databass.io
+          secretName: vital-tls
