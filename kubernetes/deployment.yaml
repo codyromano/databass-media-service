@@ -1,0 +1,22 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: databass-media
+  labels:
+    name: databass-media
+    app: databass-media
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: databass-media
+        app: databass-media
+    spec:
+      containers:
+      - name: databass-media
+        image: media:v1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 9000
+          protocol: TCP
